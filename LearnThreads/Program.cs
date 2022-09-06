@@ -11,7 +11,11 @@ namespace LearnThreads
             Console.WriteLine("Main thread starts here.");
 
             // This method takes 4 seconds to finish.
-            Program.DoSomeHeavyLifting();
+            //Program.DoSomeHeavyLifting();
+
+            // Create a thread and call a background method
+            Thread backgroundThread = new Thread(new ThreadStart(Program.DoSomeHeavyLifting));
+            backgroundThread.Start();
 
             // This method doesn't take anytime at all.
             Program.DoSomething();
