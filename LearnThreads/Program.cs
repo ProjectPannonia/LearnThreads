@@ -38,5 +38,14 @@ namespace LearnThreads
             Console.WriteLine("3....");
             Console.WriteLine("I'm awake.");
         }
+        private static void DoSomething()
+        {
+            Console.WriteLine("Hey! DoSomething here!");
+            for(int i = 0; i < 20; i++)
+                Console.WriteLine($"{i}");
+
+            Console.WriteLine();
+            Console.WriteLine("I'm done.");
+        }
     }
 }
