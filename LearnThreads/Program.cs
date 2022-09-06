@@ -10,6 +10,18 @@ namespace LearnThreads
     {
         static void Main(string[] args)
         {
+            // Main execution starts here
+            Console.WriteLine("Main thread starts here.");
+
+            // This method takes 4 seconds to finish.
+            Program.DoSomeHeavyLifting();
+
+            // This method doesn't take anytime at all.
+            Program.DoSomething();
+
+            // Execution ends here
+            Console.WriteLine("Main thread ends here.");
+
         }
     }
 }
